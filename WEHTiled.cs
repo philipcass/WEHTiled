@@ -34,6 +34,7 @@ public class WEHTiled {
                 int sid = _layers[id]._data[(row*_layers[id]._width)+column];
                 if(sid!=0){
                     FSprite s = new FSprite(_tileset[0]._elements[sid-1]);
+                    s.SetAnchor(0, 1);
                     s.x = column*32;
                     s.y = -row*32;
                     cont.AddChild(s);
